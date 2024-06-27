@@ -1,0 +1,38 @@
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-md-8 offset-md-2">
+      <div class="card shadow-sm">
+        <div class="card-body">
+          <h3 class="card-title display-4"><%= @flat.name %></h3>
+
+          <p class="card-text">
+            <i class="fa fa-home fa-lg"></i>
+            <%= @flat.name %>
+          </p>
+
+          <p class="card-text">
+            <strong>Description:</strong> <%= @flat.description %>
+          </p>
+
+          <p class="card-text">
+            <strong>Price per night:</strong> $<%= @flat.price_per_night %>
+          </p>
+
+          <p class="card-text">
+            <strong>Number of Guests:</strong> <%= @flat.number_of_guests %>
+          </p>
+
+          <%= link_to flats_path, class: "btn btn-primary" do %>
+            <i class="fa fa-arrow-left"></i>
+            Back to all flats
+          <% end %>
+
+          <%= link_to "Delete",
+             flat_path(@flat),
+             data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
+          %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

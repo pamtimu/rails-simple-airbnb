@@ -1,0 +1,55 @@
+<%= form_with model: @flat, local: true, html: { class: 'form-horizontal' } do |f| %>
+  <div class="form-group">
+    <%= f.label :name, class: 'control-label' %>
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <span class="input-group-text"><i class="fa fa-home"></i></span>
+      </div>
+      <%= f.text_field :name, class: 'form-control' %>
+    </div>
+  </div>
+
+ <div class="form-group">
+    <%= f.label :description, class: 'control-label' %>
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <span class="input-group-text"><i class="fa fa-home"></i></span>
+      </div>
+      <%= f.text_field :description, class: 'form-control' %>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :address, class: 'control-label' %>
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <span class="input-group-text"><i class="fa fa-map-marker"></i></span>
+      </div>
+      <%= f.text_field :address, class: 'form-control' %>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :price, class: 'control-label' %>
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <span class="input-group-text"><i class="fa fa-dollar-sign"></i></span>
+      </div>
+      <%= f.text_field :price, class: 'form-control' %>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :number_of_guests, class: 'control-label' %>
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <span class="input-group-text"><i class="fa fa-users"></i></span>
+      </div>
+      <%= f.number_field :number_of_guests, class: 'form-control' %>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <%= f.submit 'Save', class: 'btn btn-primary' %>
+  </div>
+<% end %>

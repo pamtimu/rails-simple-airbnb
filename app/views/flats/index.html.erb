@@ -1,0 +1,28 @@
+<div class="container mt-5">
+  <h1 class="mb-4 text-center">All our Flats</h1>
+
+  <div class="row">
+    <% @flats.each do |flat| %>
+      <div class="col-md-4">
+        <div class="card mb-4 shadow-sm">
+          <%= src=image_tag flat.images_url, class: 'card-img-top', alt: flat.name if flat.images_url.present? %>
+        
+          <div class="card-body">
+            <h5 class="card-title"><i class="fa fa-home"></i> <%= flat.name %></h5>
+            <p class="card-text"><%= truncate(flat.description, length: 100) %></p>
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="btn-group">
+                <%= link_to flat, class: 'btn btn-sm btn-primary' do %>
+                  <i class="fa fa-eye"></i> More info
+                <% end %>
+                <%= link_to edit_flat_path(flat), class: 'btn btn-sm btn-warning' do %>
+                  <i class="fa fa-pencil"></i> Edit
+                <% end %>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
