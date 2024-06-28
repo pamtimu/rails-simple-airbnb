@@ -6,7 +6,7 @@
       <div class="col-md-4">
         <div class="card mb-4 shadow-sm">
           <%= src=image_tag flat.images_url, class: 'card-img-top', alt: flat.name if flat.images_url.present? %>
-        
+        <div class="card mb-4 shadow-sm" style="background-image: url('<%= flat.images_url %>')"></div>
           <div class="card-body">
             <h5 class="card-title"><i class="fa fa-home"></i> <%= flat.name %></h5>
             <p class="card-text"><%= truncate(flat.description, length: 100) %></p>

@@ -14,7 +14,7 @@ Flat.create!(
   description: 'A lovely summer feel for this spacious garden flat. Two double bedrooms, open plan living area, large kitchen and a beautiful conservatory',
   price_per_night: 75,
   number_of_guests: 3,
-  images_url: 'https://example.com/image1.jpg'
+  images_url: 'app/assets/images/kara-eads-L7EwHkq1B2s-unsplash (1).jpg'
 )
 Flat.create!(
   name: 'Modern Flat London',
